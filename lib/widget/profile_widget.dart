@@ -17,7 +17,7 @@ class ProfileWidget extends StatelessWidget {
                   child: buildImage()),
               Positioned(
                 bottom: 3,
-                right: 50,
+                right: 53,
                 child: buildLiveButton(),
               ),
             ],
@@ -51,24 +51,21 @@ Widget buildImage() => Padding(
 Widget buildLiveButton() => Container(
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(80),
-          border: Border.all(color: Color(0xff09031d), width: 4)),
-      child: InkWell(
-        child: Container(
-          height: 27,
-          width: 55,
-          decoration: BoxDecoration(
-              color: Color.fromARGB(255, 246, 37, 0),
-              border: Border.all(
-                width: 1,
-                color: Color(0xff09031d),
-              ),
-              borderRadius: BorderRadius.circular(100)),
-          child: const Text(
-            'Live',
-            style: TextStyle(height: 1.2, fontSize: 18, color: Colors.white),
-            textAlign: TextAlign.center,
-          ),
+          border: Border.all(color: Color(0xff09031d), width: 1)),
+      child: Container(
+        height: 30,
+        width: 55,
+        decoration: BoxDecoration(
+            color: Color.fromARGB(255, 246, 37, 0),
+            border: Border.all(
+              width: 4,
+              color: Color(0xff09031d),
+            ),
+            borderRadius: BorderRadius.circular(100)),
+        child: const Text(
+          'Live',
+          style: TextStyle(height: 1.2, fontSize: 18, color: Colors.white),
+          textAlign: TextAlign.center,
         ),
-        onTap: () {},
       ),
     );
