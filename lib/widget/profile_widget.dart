@@ -6,20 +6,17 @@ class ProfileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Center(
         child: Container(
-          height: 160,
-          width: 160,
+          height: 170,
           child: Stack(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(2.0),
-                child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(80),
-                        border: Border.all(color: Colors.red, width: 3)),
-                    child: buildImage()),
-              ),
+              Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(
+                          color: Color.fromARGB(255, 246, 37, 0), width: 4)),
+                  child: buildImage()),
               Positioned(
-                bottom: -3,
+                bottom: 3,
                 right: 50,
                 child: buildLiveButton(),
               ),
@@ -30,14 +27,12 @@ class ProfileWidget extends StatelessWidget {
 }
 
 Widget buildImage() => Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(4.0),
       child: Container(
-        width: 140,
-        height: 140,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(70),
+            borderRadius: BorderRadius.circular(100),
             border: Border.all(
-                color: Color.fromARGB(255, 102, 102, 255), width: 4)),
+                color: Color.fromARGB(255, 102, 102, 255), width: 6)),
         child: ClipOval(
           child: Material(
             child: Ink.image(
@@ -57,23 +52,23 @@ Widget buildLiveButton() => Container(
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(80),
           border: Border.all(color: Color(0xff09031d), width: 4)),
-      child: SizedBox(
-        height: 25,
-        width: 55,
-        child: ElevatedButton(
-          onPressed: () => {},
-          child: Text(
+      child: InkWell(
+        child: Container(
+          height: 27,
+          width: 55,
+          decoration: BoxDecoration(
+              color: Color.fromARGB(255, 246, 37, 0),
+              border: Border.all(
+                width: 1,
+                color: Color(0xff09031d),
+              ),
+              borderRadius: BorderRadius.circular(100)),
+          child: const Text(
             'Live',
-            style: TextStyle(fontSize: 10),
+            style: TextStyle(height: 1.2, fontSize: 18, color: Colors.white),
             textAlign: TextAlign.center,
           ),
-          style: ButtonStyle(
-              shape: MaterialStateProperty.all(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-              backgroundColor: MaterialStateProperty.all<Color>(Colors.red)),
         ),
+        onTap: () {},
       ),
     );
