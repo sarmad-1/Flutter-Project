@@ -1,8 +1,9 @@
 # myproject
 
 
-My Name : Sarmad Abdullah Abdaldaem Mohammed 
-A new Flutter project.
+- My Name : Sarmad Abdullah Abdaldaem Mohammed 
+
+- A new Flutter project.
 
 
 ![preview](https://user-images.githubusercontent.com/59144856/204528117-733f702d-738a-4f39-b1e0-6ccff1483d7c.jpg)
